@@ -1,0 +1,152 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SentinelX | Security Operations Center</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <span class="brand-icon">S</span>
+            <div>
+                <h1>SentinelX</h1>
+                <p>INTRUSION DETECTION & PREVENTION SYSTEM</p>
+            </div>
+        </div>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            SYSTEM ONLINE
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="welcome">
+            <div>
+                <h2>Security Operations Center</h2>
+                <p>Real-time network threat monitoring and automated response.</p>
+            </div>
+            <div class="version">VERSION 1.0</div>
+        </section>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <p>TOTAL ALERTS</p>
+                <h3 id="total-alerts">--</h3>
+                <span>Detected security events</span>
+            </div>
+
+            <div class="stat-card">
+                <p>BLOCKED IPs</p>
+                <h3 id="blocked-ips">--</h3>
+                <span>Automatically blocked attackers</span>
+            </div>
+
+            <div class="stat-card">
+                <p>DETECTION ENGINE</p>
+                <h3 class="online">ACTIVE</h3>
+                <span>Suricata monitoring</span>
+            </div>
+
+            <div class="stat-card">
+                <p>RESPONSE ENGINE</p>
+                <h3 class="online">ACTIVE</h3>
+                <span>Automated firewall response</span>
+            </div>
+
+        </section>
+
+        <section class="panel">
+            <div class="panel-heading">
+                <h2>Live Security Alerts</h2>
+                <span class="live-label">LIVE MONITORING</span>
+            </div>
+
+         <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>TIME</th>
+                            <th>SEVERITY</th>
+                            <th>SOURCE IP</th>
+                            <th>DESTINATION IP</th>
+                            <th>ALERT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="alerts-table">
+                        <tr>
+                            <td colspan="5">Waiting for security events...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-heading">
+                <h2>Network Monitoring</h2>
+            </div>
+
+
+        <section class="panel">
+            <div class="panel-heading">
+                <h2>Blocked Attackers</h2>
+                <span class="live-label">FIREWALL BLOCKLIST</span>
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>BLOCKED IP ADDRESS</th>
+                            <th>STATUS</th>
+                        </tr>
+                    </thead>
+                    <tbody id="blocked-ips-table">
+                        <tr>
+                            <td colspan="2">Loading firewall blocklist...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+            <div class="network-info">
+                <div>
+                    <span class="network-dot"></span>
+                    <strong>Attacker Network</strong>
+                    <p>192.168.56.0/24</p>
+                </div>
+
+                <div>
+                    <span class="network-dot"></span>
+                    <strong>SentinelX Gateway</strong>
+                    <p>192.168.56.30 / 192.168.57.1</p>
+                </div>
+
+                <div>
+                    <span class="network-dot"></span>
+                    <strong>Target Network</strong>
+                    <p>192.168.57.0/24</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        SentinelX IDPS &copy; 2026 | Network Defense Monitoring
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+</html>
